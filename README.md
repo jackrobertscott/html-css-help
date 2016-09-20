@@ -54,7 +54,7 @@ Floating elements will make them fall next to each other horizontally (if there 
 ```
 .half-width-box {
   width: 50%;
-  float: left;
+  float: left; // Some times the elements will not fall inline correctly. In those cases, you might need to add a height to box such as 'height: 200px;'
 }
 .parent-element {
   overflow: auto; // This will allow the parent element to hold floated elements within it
@@ -71,3 +71,20 @@ Most website will center their content. This is done, usually, by creating a con
   margin: 0 auto; // Setting left and right to auto centers the element. If is doesn't work, you might need to adjust the 'display' attribute of the element
 }
 ```
+
+### Space between columns
+
+You sometimes want to add space between coloumns.
+
+```
+.half-width-box {
+  float: right;
+  width: 45%;
+  margin-right: 10%;
+  &:nth-child(even) {
+    margin-right: 0;
+  }
+}
+```
+
+With the above values, you can use basic math to work out that it all adds to 100% i.e. (45% + 10%) + (45% + 0) = 100%.
