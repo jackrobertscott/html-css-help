@@ -10,7 +10,7 @@ When styling these elements, the first attributes you should consider styling ar
 .structure-element {
   height: 500px; // If the content of the element determines it's height, don't include this attribute
   width: 80%;
-  margin: 0 auto; // Applying auto to the left and right of the element will center it. If is doesn't work, you might need to adjust the 'display' attribute of the element
+  margin: 20px 50px;
   padding: 50px; // Add 'box-sizing: border-box;' to the element if you want the width to include the padding
   background-color: #efefef;
 }
@@ -58,5 +58,16 @@ Floating elements will make them fall next to each other horizontally (if there 
 }
 .parent-element {
   overflow: auto; // This will allow the parent element to hold floated elements within it
+}
+```
+
+### Centering content
+
+Most website will center their content. This is done, usually, by creating a container element and putting all the page content inside this container element. Container elements are easy to create and usually look like this:
+
+```
+.container {
+  width: 800px;
+  margin: 0 auto; // Setting left and right to auto centers the element. If is doesn't work, you might need to adjust the 'display' attribute of the element
 }
 ```
