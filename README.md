@@ -44,6 +44,7 @@ This is one of the trickiest parts of first learning HTML/CSS. There are a numbe
 .half-width-box {
   width: 50%;
   display: inline-block;
+  verticle-align: top; // This ensure the child elements stack from the top like they should
 }
 ```
 
